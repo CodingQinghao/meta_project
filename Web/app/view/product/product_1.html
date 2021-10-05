@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+<!--begin::Head-->
+{include file="/public/head" /}
+<title> Select Document | {$Think.config.app.app_name}</title>
+<style>
+    input {
+        font-weight: 600 !important;
+    }
+
+    input::placeholder {
+        font-weight: 400 !important;
+    }
+
+    .form-control:disabled {
+        background-color: #F3F6F9;
+        opacity: 1;
+    }
+</style>
+{include file="/public/headEnd" /}
+<!--end::Head-->
+
+{include file="/public/top" /}
+<div class="d-flex flex-column-fluid">
+    <!--begin::Container-->
+    <div class="container">
+        <div class="card card-custom">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Create medical diagnosis certificate
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <textarea id="ckeditor" name="ckeditor">
+<table cellspacing="0" style="border-collapse:collapse; width:686px">
+	<tbody>
+		<tr>
+			<td colspan="6" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:1px solid black; height:33px; text-align:center; vertical-align:middle; white-space:nowrap; width:484px" data-name="title"><span style="font-size:22px"><span style="color:black"><span style="font-family:等线">진단서</span></span></span></td>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap; width:203px">원부대조필 인</td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:29px; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">병록번호</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">7817697</span></span></span></td>
+			<td colspan="4" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td colspan="2" rowspan="2" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:29px; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">연번호</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">2021-1129</span></span></span></td>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">주민등록번호</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">970607-210000</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+		</tr>
+		<tr>
+			<td colspan="8" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:1px solid black; height:29px; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:29px; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线"><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">환자의</span></span></span> <span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">성명</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">Li Shuang</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">성별</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">여성</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">생년월일</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">1995<span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">/</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">5</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">/</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">15</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线"></span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">연령</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线"><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">만</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">22</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">세</span></span></span></span></span></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:29px; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线"><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">환자의</span></span></span> <span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">주소</span></span></span></span></span></span></td>
+			<td colspan="4" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:left; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">부산광역시 금정구</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线"><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">전화</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线"> :</span></span></span></span></span></span></td>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">000-9999-0000</span></span></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:29px; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">병명</span></span></span></td>
+			<td colspan="4" rowspan="3" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">급성림프구성백혈병</span></span></span></td>
+			<td colspan="3" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">한국질병 <span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">분류</span></span></span> <span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">번호</span></span></span></span></span></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:29px; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="font-family:&quot;맑은 고딕&quot;,sans-serif"><span style="color:black"><span style="font-size:9pt"><span style="color:black"><span style="font-family:바탕체,monospace"></span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:&quot;맑은 고딕&quot;,sans-serif">임상적 추정 ( )</span></span></span></span></span></span></td>
+			<td colspan="3" rowspan="2" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">C919</span></span></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:29px; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线"><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">최종진단( )</span></span></span></span></span></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:29px; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">발병일</span></span></span></td>
+			<td colspan="3" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">2021<span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">/</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">10</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">/</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">4</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线"></span></span></span></span></span></span></td>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">진단일</span></span></span></td>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">2021<span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">/</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">10</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">/</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">08</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线"></span></span></span></span></span></span></td>
+		</tr>
+		<tr>
+			<td rowspan="5" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:195px; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线"><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">향후</span></span></span> <span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">치료</span></span></span> <span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">의견</span></span></span></span></span></span></td>
+			<td colspan="7" rowspan="5" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:1px solid black; text-align:left; vertical-align:middle; white-space:normal; width:580px"><span style="font-size:9px"><span style="color:black"><span style="font-family:等线">환자는 평소 특별한 과거병력이 없었던 자로, 내원 1개월 전부터 어지러움증과 피곤감, 설사 및 좌상복부통증의 증세가 있어 인근병원에서 시행한 복부초음파검사상 비장종대 소견을 보여 단국대학병원에서 혈액검사 등을 시행한 결과 급성백혈병 의심소견이 있어 본원으로 전원되어 급성림프구성백혈병으로 확진된 경우임.</span></span></td>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+			<td rowspan="3" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:57px; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">비고</span></span></span></td>
+			<td colspan="3" rowspan="3" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td rowspan="3" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">용도</span></span></span></td>
+			<td colspan="3" rowspan="3" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">기관 <span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">제출용</span></span></span></span></span></span></td>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+			<td colspan="8" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:1px solid black; height:19px; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:29px; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">위와 <span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">같이</span></span></span> <span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">진단함</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">.</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:29px; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">발행일<span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">:</span></span></span></span></span></span></td>
+			<td colspan="3" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">2021/10/8</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:29px; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">의료기관명<span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">:</span></span></span></span></span></span></td>
+			<td colspan="3" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线"><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">메타</span></span></span> <span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">병원</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:29px; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">주소 <span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">및</span></span></span> <span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">명칭</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">:</span></span></span></span></span></span></td>
+			<td colspan="3" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">부산광역시 금정구 장전로</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:29px; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线"><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">전화</span></span></span> <span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">및</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线"> FAX:</span></span></span></span></span></span></td>
+			<td colspan="3" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">051-000-0000</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:29px; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">　</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线"><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">면허</span></span></span> <span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">번호</span></span></span></span></span></span></td>
+			<td colspan="3" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">제<span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">919-547882</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">호</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线"><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">의사성명</span></span></span><span style="font-size:9pt"><span style="color:black"><span style="font-family:等线">&nbsp;</span></span></span></span></span></span></td>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:nowrap"><span style="font-size:12px"><span style="color:black"><span style="font-family:等线">Kim</span></span></span></td>
+		</tr>
+	</tbody>
+</table>
+
+                </textarea>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label>Source language:</label>
+                                <select class="form-control"  id="source" name="source">
+                                    <option value="KR" selected>Korean(reinforcement model)</option>
+                                    <option value="EN">English</option>
+                                    <option value="CN">Chinese</option>
+                                    <option value="JP">Japanese</option>
+                                    <option value="VN">Vietnamese</option>
+                                    <option value="RS">Russian</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-12" style="margin-top:10px">
+                                <label>Target language:</label>
+                                <select class="form-control" id="target" name="target">
+                                    <option value="KR">Korean</option>
+                                    <option value="EN" selected>English(reinforcement model)</option>
+                                    <option value="CN">Chinese</option>
+                                    <option value="JP">Japanese</option>
+                                    <option value="VN">Vietnamese</option>
+                                    <option value="RS">Russian</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-12" style="margin-top:10px">
+                                <label>Customer e-mail:</label>
+                                <input type="email" id="email" class="form-control" name="title" maxlength="30" placeholder="customer@mailbox.com" autocomplete="off">
+                            </div>
+                            <div class="col-lg-12" style="margin-top:10px">
+                                <button type="reset" class="btn btn-primary mr-2" onclick="submit()">Create and translate</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div hidden id="hide"></div>
+    </div>
+    <!--end::Container-->
+</div>
+<!--end::Entry-->
+{include file="/public/bottom" /}
+
+<script src="/static/admin/ckeditor/ckeditor.js"></script>
+
+<script>
+    $('[name="source"]').select2({
+        minimumResultsForSearch: Infinity
+    });
+    $('[name="target"]').select2({
+        minimumResultsForSearch: Infinity
+    });
+    CKEDITOR.replace('ckeditor', {
+        //fullPage: true,
+
+        // Disable content filtering because if you use full page mode, you probably
+        // want to  freely enter any HTML content in source mode without any limitations.
+        allowedContent: true,
+        height: 700
+    } );
+    function submit(){
+        var data = CKEDITOR.instances.ckeditor.getData();
+        $("#hide").html(data);
+        sentence  =[]
+        $("#hide").find("td").each(function(index,ele){
+            if ($(ele).text()!="　"){
+                sentence.push($(ele).text())
+            }
+        })
+        $.ajax({
+            url:"/translate/addTask",
+            data:{
+                "source":$("#source").val(),
+                "target":$("#target").val(),
+				"email":$("#email").val(),
+                "sentence_list":sentence,
+				"goods_id":1,
+                "html":data,
+                "type":"MedicalTranslation"
+            },
+            dataType:"json",
+            type:"post",
+            cache:false,
+            async:false,
+            success:function(data){
+                if (data.code !== 200) {
+                    swal.fire(data.msg, "", "error");
+                    return;
+                } else {
+                    swal.fire(data.msg, "", "success");
+                    setTimeout(function () {
+                        //window.location.href = '/admin/order/orderInfo?id=' + data.data;
+                    }, 1500);
+                }
+            }
+        });
+    }
+
+
+</script>
+
+
+{include file="/public/footBody" /}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+<!--begin::Head-->
+{include file="/public/head" /}
+<title> Select Document | {$Think.config.app.app_name}</title>
+<style>
+    input {
+        font-weight: 600 !important;
+    }
+
+    input::placeholder {
+        font-weight: 400 !important;
+    }
+
+    .form-control:disabled {
+        background-color: #F3F6F9;
+        opacity: 1;
+    }
+    #cke_hide{
+        display:none;
+    }
+</style>
+{include file="/public/headEnd" /}
+<!--end::Head-->
+
+
+<div class="d-flex flex-column-fluid">
+    <!--begin::Container-->
+    <div class="container">
+        <div class="card card-custom my-10">
+            <div class="card-body p-0">
+                <!--begin::Invoice-->
+                <div class="row justify-content-center pt-8 px-8 pt-md-27 px-md-0">
+                    <div class="col-md-9">
+                        <!-- begin: Invoice header-->
+                        <div class="d-flex justify-content-between pb-10 pb-md-20 flex-column flex-md-row">
+                            <h1 class="display-4 font-weight-boldest mb-10">INVOICE</h1>
+                            <div class="d-flex flex-column align-items-md-end px-0">
+                                <!--begin::Logo-->
+                                <a class="mb-5 max-w-200px" href="#">
+                                </a>
+                                <!--end::Logo-->
+                                <span class="d-flex flex-column align-items-md-end font-size-h5 font-weight-bold text-muted">
+															<span>Pusan National University</span>
+															<span>Nature Research Building 316, AI Lab.</span>
+														</span>
+                            </div>
+                        </div>
+                        <div class="rounded-xl overflow-hidden w-100 mb-10" style="text-align: center;">
+                            <img alt="" class="margin:0 auto"
+                                 src="/static/admin/media/logos/pay1.png" width="200px" height="250px">
+                            <br/>
+                            <br/>
+                            <button type="button" class="btn btn-success mr-2"  onclick="savetopdf()">Download after payment</button>
+                        </div>
+                        <!--end: Invoice header-->
+                        <!--begin: Invoice body-->
+                        <div class="row pb-10">
+                            <div class="col-md-9 ">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th class="pt-1 pb-9 pl-0 font-weight-bolder text-muted font-size-lg text-uppercase">
+                                                Order Name
+                                            </th>
+                                            <th class="pt-1 pb-9 text-right font-weight-bolder text-muted font-size-lg text-uppercase">
+                                                Qty
+                                            </th>
+                                            <th class="pt-1 pb-9 text-right font-weight-bolder text-muted font-size-lg text-uppercase">
+                                                Price
+                                            </th>
+                                            <th class="pt-1 pb-9 text-right pr-0 font-weight-bolder text-muted font-size-lg text-uppercase">
+                                                AMOUNT
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="font-weight-bolder font-size-lg">
+                                            <td class="border-top-0 pl-0 pt-7 d-flex align-items-center">
+                                                <span class="navi-icon mr-2">
+                                                    <i class="fa fa-genderless text-danger font-size-h2"></i>
+                                                </span>Medical Translation Services
+                                            </td>
+                                            <td class="text-right pt-7">1</td>
+                                            <td class="text-right pt-7">$10.00</td>
+                                            <td class="pr-0 pt-7 font-size-h6 font-weight-boldest text-right">$10.00</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="border-bottom w-100 mt-7"></div>
+                            </div>
+                            <div class="col-md-3 border-left-md  text-right">
+                                <!--begin::Total Amount-->
+                                <div class="font-size-h4 font-weight-bolder text-muted mb-3">TOTAL AMOUNT</div>
+                                <div class="font-size-h1 font-weight-boldest">$10.00</div>
+                                <div class="text-muted font-weight-bold mb-16">Taxes included</div>
+                                <!--end::Total Amount-->
+                                <div class="border-bottom w-100 "></div>
+                            </div>
+                        </div>
+                        <!--end: Invoice body-->
+                    </div>
+                </div>
+                <!--end::Invoice-->
+            </div>
+        </div>
+        <div hidden id="hide">{$info.html|raw}</div>
+    </div>
+
+    <!--end::Container-->
+</div>
+<!--end::Entry-->
+{include file="/public/bottom" /}
+
+<script src="/static/admin/ckeditor/ckeditor.js"></script>
+
+<script>
+
+    CKEDITOR.replace('hide', {
+        //fullPage: true,
+
+        // Disable content filtering because if you use full page mode, you probably
+        // want to  freely enter any HTML content in source mode without any limitations.
+        allowedContent: true,
+        height: 700
+    } );
+
+    function savetopdf(){
+        $('#cke_21').trigger("click");
+    }
+
+
+    function getTableWord(word){
+        result = ''
+        $.ajax({
+            url:"/customer/getTableWord",
+            data:{
+                "word":word,
+                "seccode":"{$info.seccode}"
+            },
+            dataType:"json",
+            type:"post",
+            cache:false,
+            async:false,
+            success:function(data){
+                result = data.data
+            }
+        });
+        return result
+    }
+
+    function getSentence(sentence){
+        result = ''
+        $.ajax({
+            url:"/customer/getSentence",
+            data:{
+                "sentence":sentence,
+                "seccode":"{$info.seccode}"
+            },
+            dataType:"json",
+            type:"post",
+            cache:false,
+            async:false,
+            success:function(data){
+                result = data.data
+            }
+        });
+        return result
+    }
+
+
+    sentence  =[]
+    $("#hide").find("td").each(function(index,ele){
+        console.log($(ele).text())
+        if ($(ele).text()!="　"){
+            var chPattern = /^[A-Za-z0-9  \!\@\#\$\^\&\*\-\_\+\=\:\\\'\;\,\.\/\?\(\)\{\}\[\]\<\>]*$/;
+
+            if (chPattern.test($(ele).text()) == true){
+                return true
+            }
+
+            result = getTableWord($(ele).text())
+            if (result==null){
+                result = getSentence($(ele).text())
+            }
+
+
+            $(ele).text(result)
+            //sentence.push($(ele).text())
+        }
+    })
+    $("#ckeditor").html($("#hide").html())
+</script>
+
+{include file="/public/footBody" /}

@@ -1,0 +1,27 @@
+
+    <!--begin::Body-->
+    <body id="kt_body" class="header-fixed header-mobile-fixed  subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+        <!--begin::Main-->
+        <!--begin::Header Mobile-->
+        {include file="/public/mobileHeader" /}
+        <!--end::Header Mobile-->
+
+        <!-- begin::User Panel-->
+        {include file="/public/userPanel" /}
+        <!-- end::User Panel-->
+
+        <div class="d-flex flex-column flex-root">
+            <!--begin::Page-->
+            <div class="d-flex flex-row flex-column-fluid page">
+                <!--begin::Aside-->
+                {include file="/public/aside" /}
+                <!--end::Aside-->
+
+                <!--begin::Wrapper-->
+                <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+                    <!--begin::Header-->
+                    {include file="/public/header" /}   
+                    <!--end::Header-->
+
+                    <!--begin::Content-->
+                    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">

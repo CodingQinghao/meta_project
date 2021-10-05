@@ -1,0 +1,56 @@
+{include file="/login/header" /}
+<title>Login | {$Think.config.app.app_name}</title>
+<link href="/static/admin/app/login/login.css" rel="stylesheet" type="text/css" />
+{include file="/login/headerEnd" /}
+
+<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+    <div class="d-flex flex-column flex-root">
+        <div class="login login-3 wizard d-flex flex-column flex-lg-row flex-column-fluid">
+            <div class="login-aside d-flex flex-column flex-row-auto">
+                <div class="d-flex flex-column-auto flex-column pt-lg-40 pt-15">
+                    <a class="login-logo text-center pt-lg-25 pb-10">
+
+                    </a>
+                    <h3 class="text-center font-size-h5 text-dark-50 line-height-xl">
+                        M E T A<br/>
+                        International certificate translation plan
+                        <br/>
+                        Author: Zhang QingHao,Serin Kim
+                    </h3>
+                </div>
+                <div class="aside-img d-flex flex-row-fluid bgi-no-repeat bgi-position-x-center" style="background-position-y: calc(100% + 5rem); background-image: url(/static/admin/app/login/media/login.svg)"></div>
+            </div>
+            <div class="login-content flex-row-fluid d-flex flex-column p-10">
+                <div class="d-flex flex-row-fluid flex-center">
+                    <div class="login-form">
+                        <div class="form" id="kt_login_singin_form">
+                            <div class="pb-5 pb-lg-10">
+                                <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">Signin</h3>
+                                <div class="text-muted font-weight-bold font-size-h4">Ask Question?
+                                    <a  class="text-primary" style='cursor:help' data-toggle="popover" title="" data-content="+82 010-5692-0418 (KR) <br/> " data-html="true" data-original-title="7*24 Hours">Call me</a>
+                                </div>
+                            </div>
+                            <div class="alert alert-primary" id="loginAlert" role="alert" style="display: none"></div>
+                            <div class="form-group">
+                                <label class="font-size-h6 text-dark">Account</label>
+                                <input class="form-control h-auto py-7 px-6 rounded-lg border-0" type="text" id="account" autocomplete='off' autocomplete="off" />
+                            </div>
+                            <div class="form-group">
+                                <div class="d-flex justify-content-between mt-n5">
+                                    <label class="font-size-h6 text-dark pt-5">Password</label>
+                                </div>
+                                <input class="form-control h-auto py-7 px-6 rounded-lg border-0" type="text" onfocus="this.type='password'" id="password" autocomplete="off" />
+                            </div>
+                            <div class="pb-lg-0 pb-5">
+                                <button type="submit" id="doLogin" class="btn btn-primary font-size-h6 px-12 py-4 my-3 mr-3" style="float: right;">Signin</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {include file="/login/footer" /}
+    <script src="/static/admin/app/login/login.js"></script>
+    {include file="/login/footerEnd" /}

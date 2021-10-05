@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+<!--begin::Head-->
+{include file="/public/head" /}
+<title> Select Document | {$Think.config.app.app_name}</title>
+<style>
+    input {
+        font-weight: 600 !important;
+    }
+
+    input::placeholder {
+        font-weight: 400 !important;
+    }
+
+    .form-control:disabled {
+        background-color: #F3F6F9;
+        opacity: 1;
+    }
+</style>
+{include file="/public/headEnd" /}
+<!--end::Head-->
+
+{include file="/public/top" /}
+<div class="d-flex flex-column-fluid">
+    <!--begin::Container-->
+    <div class="container">
+        <div class="card card-custom">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Editor medical diagnosis certificate
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <textarea id="ckeditor" name="ckeditor">
+							{$info.html|raw}
+                		</textarea>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div hidden id="hide"></div>
+    </div>
+    <!--end::Container-->
+</div>
+<!--end::Entry-->
+{include file="/public/bottom" /}
+
+<script src="/static/admin/ckeditor/ckeditor.js"></script>
+
+<script>
+    $('[name="source"]').select2({
+        minimumResultsForSearch: Infinity
+    });
+    $('[name="target"]').select2({
+        minimumResultsForSearch: Infinity
+    });
+    CKEDITOR.replace('ckeditor', {
+        //fullPage: true,
+
+        // Disable content filtering because if you use full page mode, you probably
+        // want to  freely enter any HTML content in source mode without any limitations.
+        allowedContent: true,
+        height: 700
+    } );
+
+
+	function getTableWord(word){
+		result = ''
+		$.ajax({
+			url:"/customer/getTableWord",
+			data:{
+                "word":word,
+                "seccode":"{$info.seccode}"
+			},
+			dataType:"json",
+			type:"post",
+			cache:false,
+			async:false,
+			success:function(data){
+				result = data.data
+			}
+		});
+		return result
+	}
+
+	function getSentence(sentence){
+		result = ''
+		$.ajax({
+			url:"/customer/getSentence",
+			data:{
+				"sentence":sentence,
+                "seccode":"{$info.seccode}"
+			},
+			dataType:"json",
+			type:"post",
+			cache:false,
+			async:false,
+			success:function(data){
+				result = data.data
+			}
+		});
+		return result
+	}
+
+	var data = CKEDITOR.instances.ckeditor.getData();
+	$("#hide").html(data);
+	sentence  =[]
+	$("#hide").find("td").each(function(index,ele){
+		console.log($(ele).text())
+		if ($(ele).text()!="　"){
+            var chPattern = /^[A-Za-z0-9  \!\@\#\$\^\&\*\-\_\+\=\:\\\'\;\,\.\/\?\(\)\{\}\[\]\<\>]*$/;
+
+            if (chPattern.test($(ele).text()) == true){
+                return true
+            }
+
+			result = getTableWord($(ele).text())
+			if (result==null){
+				result = getSentence($(ele).text())
+			}
+
+
+			$(ele).text(result)
+			//sentence.push($(ele).text())
+		}
+	})
+	$("#ckeditor").html($("#hide").html())
+</script>
+
+
+{include file="/public/footBody" /}
